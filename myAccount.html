@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<!--Code for IntoTheOutdoors My Account Page-->
+<!--Note: As mentioned in ourCommunity.html notes, due to 
+deployement of website on GitHub server-side and sessions are not able 
+to take place, therefore this is a prototype with javaScript functionality 
+and validation to show the process-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <!--Link to stylesheet for all webpages-->
+    <link rel="stylesheet" href="allFilesStyle.css">
+    <style>
+        .login-form , .sign-up-controls{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 5px;
+        }
+
+        .section-2 {
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+
+        .section-2 h2{
+            font-family: Verdana, Tahoma, sans-serif;
+            font-size: 20px;
+        }
+
+        .section-3 {
+            padding-top: 8px;
+            padding-bottom: 30px;
+        }
+
+        .section-3 h2{
+            font-family: Verdana, Tahoma, sans-serif;
+            font-size: 20px;
+        }
+
+        .section-3 p{
+            font-family: Verdana, Tahoma, sans-serif;
+            font-size: 15px;
+        }
+        ::placeholder {
+            font-size: 14px;
+            color: black;
+        }
+       .section-2 input[type=password], input[type=text]{
+            width: 50%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: none;
+            background-color: rgb(0, 191, 99);
+            border-radius: 10px;
+        }
+
+        .section-3 [type=text], input[type=password], input[type=email]{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: none;
+            background-color: rgb(255, 222, 89);
+            border-radius: 10px;
+        }
+
+        .login-button{
+            background-color: rgb(0, 191, 99);
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 10%;
+            box-shadow: 0 10px black;
+            border-radius: 10px;
+            margin: 0 5px;
+        }
+
+        .cancel-button , .register-button{
+            background-color: rgb(255, 222, 89);
+            padding: 14px 20px;
+            margin: 8px 5px;
+            cursor: pointer;
+            width: 10%;
+            box-shadow: 0 10px black;
+            border-radius: 10px;
+        }
+    </style>
+<head>
+</head>
+<body>
+    <!--Section 1 with Navigation Bar & Logo-->
+    <section class="section-1">
+    <img src="IntoTheOutdoors Logo.png" alt="IntoTheOutdoors Logo of mountains" class="logo-center">
+
+    <div class="top-navbar">
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="tips&benefits.html">Tips & Benefits</a></li>
+            <li><a href="ourCommunity.html">Our Community</a></li>
+            <li><a href="nearbyRoutes.html">Nearby Routes</a></li>
+        </ul>
+    </div>
+    </section>
+
+    <!--Login Section-->
+    <section class="section-2">
+        <h2>Login to your account here...</h2>
+        <form id="login-form" method="post">
+            <div class ="login-form">
+            <!--Get username from user-->
+            <div class="username">
+                <label for="username" class="required">Username:</label>
+                <input type="text" placeholder="Enter your username" id="username" required minlength="6" maxlength ="12">
+            </div>
+            <!--Get password from user-->
+            <div class="password">
+                <label for="password" class="required">Password:</label>
+                <input type="password" placeholder="Enter your password" id="password" required minlength="8" maxlength="15">
+            </div>
+            <button class="login-button" type="submit">Login</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Registration Section-->
+    <section class="section-3">
+        <h2>Sign up below...</h2>
+        <p>Please fill the form below to create an account!</p>
+        <div class="sign-up-container">
+        <form id="sign-up-form" method="post">
+            <!--Get user's full name-->
+            <label for="full-name">Full Name:</label>
+            <input type="text" placeholder="Enter full name" id="full-name" required maxlength="50">
+            <!--Get user's email address-->
+            <label for="email-address">Email:</label>
+            <input type="email" placeholder="Enter email" id="email-address" required>
+            <!--Get user to create a username-->
+            <label for="user-username">Username:</label>
+            <input type="text" placeholder="Enter username" id="user-username" required minlength="6" maxlength ="12">
+            <!--Get user to create a password-->
+            <label for="user-password">Password:</label>
+            <input type="password" placeholder="Enter password" id="user-password" required minlength="8" maxlength ="15" >
+            <!--Get user to confirm password-->
+            <label for="password-repeat">Confirm Password:</label>
+            <input type="password" placeholder="Please confirm password" id="password-repeat" required onblur="validatePassword()">
+            <!--JavaScript to validate that password is the same as previously entered with JavaScript before submitting form-->
+            <script>
+                function validatePassword() {
+                    var original_password = document.getElementById('user-password').value;
+                    var confirming_password = document.getElementById('password-repeat').value;
+
+                    if (original_password === confirming_password) {
+                        //Check if original and confirm password entered by user are a match
+                        return true;
+                    } else {
+                        alert("The confirm password is not a match to original. Please try again.")
+                        return false;
+                    }
+                }
+            </script>
+            <!--Buttons to cancel account/sign up account to website-->
+            <div class="sign-up-controls">
+            <button class="cancel-button" type="button">Cancel</button>
+            <button class="register-button" type="submit">Register Account</button>
+            </div>
+        </div>
+        </form>
+    </section>
+    <!--Link to JavaScript File that handles login and registration details and process of an account-->
+    <script src="myAccount.js"></script>
+    </body>
+    </html>

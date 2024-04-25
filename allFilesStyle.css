@@ -1,0 +1,60 @@
+/* Stylesheet for all pages of IntoTheOutdoors */ 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(0,191,99);
+}
+
+/* Styling for Section 1 */
+.section-1{
+    background-color: rgb(0,191,99);
+}
+
+.logo-center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+/* Styling for Navigation Bar */
+.top-navbar ul{
+    list-style-type: none;
+    background-color: darkgreen;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.top-navbar a{
+    color: rgb(255,222,89);
+    text-decoration:none;
+    width: 100px;
+    display: block;
+    padding: 25px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.top-navbar a:hover{
+    background-color: rgb(0,191, 99);
+}
+
+.top-navbar li{
+    display: inline-block;
+}
+
+/*Styling for section-2 */
+.section-2{
+    background-color: rgb(255,222, 89);
+    padding: 100px;
+}
+
+/*Styling for section-3 */
+.section-3{
+    background-color: rgb(0,191, 99);
+    padding: 190px;
+}

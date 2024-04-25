@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--Code for IntoTheOutdoors My Profile Page-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <!-- Link to both its own stylesheet and overall for all webpages -->
+    <link rel="stylesheet" href="allFilesStyle.css">
+    <style>
+
+        .section-2{
+            padding-top: 2px;
+            padding-bottom: 60px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-3{
+            padding-top: 2px;
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .my-profile-container{
+            width: 30%;
+            max-width: 550px;
+            background: rgb(0, 238, 124);
+            color: black;
+            margin: 100px auto 0;
+            border-radius: 20px;
+            box-shadow: 0 10px black;
+            padding: 40px 35px;
+            text-align: center;
+            padding-top: 1px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .log-out-btn{
+            background-color: rgb(0, 191, 99);
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 50%;
+            padding-bottom: 6px;
+            box-shadow: 0 2px black;
+            border-radius: 10px;
+            margin: 0 5px;
+        }
+
+        .saved-routes-container{
+            width: 100%;
+            max-width: 550px;
+            background: rgb(0, 238, 124);
+            color: black;
+            border-radius: 20px;
+            box-shadow: 0 10px black;
+            padding: 40px 35px;
+            text-align: center;
+            margin-left: 0;
+            padding-top: 2px;
+            padding-bottom: 0.5px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .saved-route{
+            width: 100%;
+            max-width: 550px;
+            background: rgb(255, 222, 89);
+            border-radius: 20%;
+            padding: 40px 35px;
+            text-align: center;
+            margin-left: 0;
+            margin-right: right;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-3 p{
+            margin: 0;
+        }
+        
+        .saved-route-icon{
+            width: 35px;
+            height: 35px;
+            position: relative;
+            bottom: 0;
+            right: 0;
+            padding-top: 15px;
+            padding-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+<head></head>
+<body> 
+    <!--Section 1 with Navigation Bar & Logo-->
+    <section class="section-1">
+    <img src="IntoTheOutdoors Logo.png" alt="IntoTheOutdoors Logo of mountains" class="logo-center">
+
+    <div class="top-navbar">
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="tips&benefits.html">Tips & Benefits</a></li>
+            <li><a href="ourCommunity.html">Our Community</a></li>
+            <li><a href="nearbyRoutes.html">Nearby Routes</a></li>
+        </ul>
+    </div>
+    </section>
+
+    <!--My Profile Section Prototype (Note: as previously mentioned to due deployment on github, prototype example has been created
+    where username would have been displayed and log out button to exit account-->
+    <section class="section-2">
+        <div class="my-profile-container">
+            <h1>My Profile</h1>
+            <p>Username: </p>
+            <button class="log-out-btn">Log Out</button>
+        </div>
+    </section>
+
+    <!--Saved Route Prototype -->
+    <section class="section-3">
+        <div class="saved-routes-container">
+            <h2>Saved Routes</h2>
+        </div>
+        <div class="saved-route">
+            <p>Saved Route 1:</p>
+            <img class ="saved-route-icon" src="saved-route-icon.png" alt="saved route button">
+        </div>
+        <div class="saved-route">
+            <p>Saved Route 2:</p>
+            <img class ="saved-route-icon" src="saved-route-icon.png" alt="saved route button">
+        </div>
+        <div class="saved-route">
+            <p>Saved Route 3:</p>
+            <img class ="saved-route-icon" src="saved-route-icon.png" alt="saved route button">
+        </div>
+        <div class="saved-route">
+            <p>Saved Route 4:</p>
+            <img class ="saved-route-icon" src="saved-route-icon.png" alt="saved route button">
+        </div>
+</body>
+<html>
